@@ -1,0 +1,23 @@
+@import 'components/variables.scss';
+@import 'components/mixins.scss';
+
+@import 'components/global.scss';
+@import 'components/type.scss';
+@import 'components/btns.scss';
+@import 'components/forms.scss';
+@import 'components/grid.scss';
+@import 'components/blocks.scss';
+@import 'components/format.scss';
+
+.icon-lg {
+	height: 52px;
+}
+.icon-md {
+	height: 44px;
+}
+.icon-sm {
+	height: 32px;
+}
+.price {
+	width: 70%;
+}
