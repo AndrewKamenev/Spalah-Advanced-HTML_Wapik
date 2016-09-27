@@ -1,12 +1,12 @@
-$form-color: red !default;
-$form-bg: #eaeef1 !default;
-$form-border: 1px solid #eaeef1 !default;
-$form-border-radius: 2px !default;
-$form-height: 44px !default;
-$form-padding-x: 20px !default;
-$form-font-size: 14px !default;
+$form-color: #83a7a5 !default;
+$form-bg: #eef1ec !default;
+$form-border: 1px solid $form-bg !default;
+$form-border-radius: 3px !default;
+$form-height: 36px !default;
+$form-padding-x: 15px !default;
+$form-font-size: 13px !default;
 $form-line-height: 1.4 !default;
-$form-margin-bottom: 15px !default;
+$form-margin-top: 20px !default;
 
 $form-label-color: #eaeef1 !default;
 $form-label-font-size: 14px !default;
@@ -15,7 +15,7 @@ $form-label-margin-bottom: 4px !default;
 
 @mixin placeholder($color, $opacity: 1) {
     &::-webkit-input-placeholder {
-        color: $color;
+        color: #83a7a5;
         opacity: $opacity;
         @content;
     }
@@ -48,11 +48,11 @@ $form-label-margin-bottom: 4px !default;
 
 .form {
     &-group {
-        margin-bottom: $form-margin-bottom;
+        margin-bottom: $form-margin-top;
     }
     &-control {
         width: 100%;
-        display: block;
+        display: inline-block;
         color: $form-color;
         font-size: $form-font-size;
         background-color: $form-bg;
@@ -63,11 +63,32 @@ $form-label-margin-bottom: 4px !default;
         $padding-y: ($form-height - ($form-font-size * $form-line-height)) / 2;
         padding: $padding-y $form-padding-x;
         @include placeholder(#fff);
+        &-textarea {
+            height: auto;
+            color: red;
+        }
     }
     &-label {
         display: block;
         color: $form-label-color;
         font-size: $form-label-font-size;
         margin-bottom: $form-label-margin-bottom;
+    }
+}
+.form-control-input {
+    @extend .form-control;
+    width: 84%;
+    float: left;
+    border-radius: 3px 0 0 3px;
+}
+.button-in-form {
+    @extend .form-control;
+    background: $form-bg url(../images/icon-button.png) no-repeat center;
+    width: 16%;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    &:hover {
+        background-color: $color-highlight-add;
+        opacity: 0.7;
     }
 }

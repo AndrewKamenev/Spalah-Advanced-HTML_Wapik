@@ -1,13 +1,13 @@
-$btn-color: #333 !default;
-$btn-font-size: 16px !default;
-$btn-bg: #ddd !default;
+$btn-color: #fff !default;
+$btn-font-size: 13px !default;
+$btn-bg: $body-color !default;
 $btn-border: 1px solid $btn-bg !default;
-$btn-border-radius: 4px !default;
-$btn-padding: 10px 20px !default;
+$btn-border-radius: 2px !default;
+$btn-padding: 15px 20px !default;
 
-$btn-color-hover:  #333 !default;
-$btn-bg-hover: #ddd !default;
-$btn-border-color-hover: $btn-bg !default;
+$btn-color-hover:  $btn-color !default;
+$btn-bg-hover: $color-highlight !default;
+$btn-border-color-hover: $btn-bg-hover !default;
 
 @mixin btn-variants( 
 	$color, 
@@ -44,16 +44,28 @@ $btn-border-color-hover: $btn-bg !default;
     border: $btn-border;
     border-radius: $btn-border-radius;
     padding: $btn-padding;
-
+    text-transform: uppercase;
     &:hover {
         color: $btn-color-hover;
         background: $btn-bg-hover;
         border-color: $btn-border-color-hover;
     }
 }
-// .btn-primary {
-// 	@include btn-variants()
-// }
+.btn-primary {
+	background-color: $color-highlight;
+    &-dark {
+        background-color: #49732f;
+    }
+    &:hover {
+        opacity: 0.5;
+    }
+}
+.btn-aditional {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px 15px;
+}
 
 // .btn-sm {
 // 	@include btn-size();

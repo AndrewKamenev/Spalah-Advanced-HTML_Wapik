@@ -1,4 +1,4 @@
-$container-width: 1170px !default;
+$container-width: 1050px !default;
 $container-gutter: 0 10px !default;
 
 html {
@@ -30,8 +30,8 @@ body {
 	table-layout: fixed;
 }
 .footer {
-	display: table-footer-group;
-	height: 1%;
+	// display: table-footer-group;
+	padding-bottom: 30px;
 }
 
 .container {

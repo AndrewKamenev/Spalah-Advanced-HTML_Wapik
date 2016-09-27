@@ -1,37 +1,37 @@
-$body-color: #000 !default;
+$body-color: #83a7a5 !default;
 $body-bg: #fff !default;
 
 $font-size-base: 14px !default;
-$line-height-base: 1.4 !default;
+$line-height-base: 1.57 !default;
 $font-family-base: 'Roboto', sans-serif !default;
-$p-margin-bottom: 15px !default;
+$p-margin-bottom: 10px !default;
 
-$link-color: black !default;
+$link-color: $body-color !default;
 $link-decoration: none !default;
 $link-color-hover: lighten($link-color, 10%)!default;
 $link-decoration: none !default;
 $link-decoration-hover: none!default;
 
 $heading-font-family: inherit !default;
-$heading-font-weight: 700 !default;
-$heading-color: inherit !default;
+$heading-font-weight: 300 !default;
+$heading-color: #0f5f5c !default;
 
-$heading-font-size-1: 36px !default;
-$heading-margin-1: 1em !default;
+$heading-font-size-1: 38px !default;
+$heading-margin-1: 0 !default;
 
-$heading-font-size-2: 30px !default;
-$heading-margin-2: 1em !default;
+$heading-font-size-2: 32px !default;
+$heading-margin-2: 20px !default;
 
-$heading-font-size-3: 24px !default;
-$heading-margin-3: 1em !default;
+$heading-font-size-3: 32px !default;
+$heading-margin-3: 28px !default;
 
-$heading-font-size-4: 18px !default;
+$heading-font-size-4: 22px !default;
 $heading-margin-4: 1em !default;
 
-$heading-font-size-5: 14px !default;
+$heading-font-size-5: 28px !default;
 $heading-margin-5: 1em !default;
 
-$heading-font-size-6: 12px !default;
+$heading-font-size-6: 50px !default;
 $heading-margin-6: 1em !default;
 
 body {
@@ -58,28 +58,72 @@ h1,h2,h3,h4,h5,h6,
 	font-family: $heading-font-family;
 	color: $heading-color;
 	font-weight: $heading-font-weight;
+	text-align: center;
 }
 h1,.h1 {
 	font-size: $heading-font-size-1;
-	margin: $heading-margin-1;
+	margin-bottom: $heading-margin-1;
+	color: white;
+	text-align: left;
 }
 h2,.h2 {
 	font-size: $heading-font-size-2;
-	margin: $heading-margin-2;
+	margin-bottom: $heading-margin-2;
+	&:after {
+		content: "";
+		display: block;
+		width: 65px;
+		height: 1px;
+		background-color: $color-highlight;
+		margin: 10px auto;
+	}
 }
 h3,.h3 {
 	font-size: $heading-font-size-3;
-	margin: $heading-margin-3;
+	margin-bottom: $heading-margin-3;
+	text-align: left;
 }
 h4,.h4 {
 	font-size: $heading-font-size-4;
-	margin: $heading-margin-4;
+	margin-bottom: $heading-margin-4;
+	margin-top: 80px;
+	&:after {
+		@extend .h2:after;
+	}
 }
 h5,.h5 {
 	font-size: $heading-font-size-5;
-	margin: $heading-margin-5;
+	margin-bottom: $heading-margin-5;
+
 }
 h6,.h6 {
 	font-size: $heading-font-size-6;
 	margin: $heading-margin-6;
+	color: white;
+}
+.text-lg {
+	font-size: 16px;
+}
+.text-md {
+	font-size: 15px;
+	text-align: center;
+}
+.text-sm {
+	font-size: 14px;
+}
+.text-highlight {
+	color: $color-highlight;
+	&-add {
+		color: $heading-color;
+	}
+}
+.text-uppercase {
+	text-transform: uppercase;
+}
+.text-inverse {
+	color: white !important;
+}
+.ul-main {
+	list-style-image: '<i class="fa fa-check-circle-o" aria-hidden="true"></i>';
+	line-height: 2.57;
 }

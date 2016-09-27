@@ -1,5 +1,4 @@
 .block {
-	padding: 20px 0;
 	background-size: cover;
 	background-position: 50% 50%;
 	display: table;
@@ -40,8 +39,14 @@
 			right: 0;
 			bottom: 0;
 			z-index: -1;
-			background-color: red;
-			opacity: 0.5;
+			background-color: #2d6e70;
+			opacity: 0.9;
+		}
+		&-header {
+			background-image: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+		}
+		&-main:after {
+			background-color: #eef1ec;
 		}
 	}
 }
@@ -53,5 +58,7 @@
 	padding: 0;
 	li {
 		display: inline-block;
+		margin-left: 25px;
+		font-family: "Montserrat";
 	}
 }
