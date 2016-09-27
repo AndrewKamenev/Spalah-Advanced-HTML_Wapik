@@ -25,6 +25,10 @@ body {
   padding-bottom: 30px;
 }
 
+body {
+  min-width: 500px;
+}
+
 .container {
   margin: auto;
   max-width: 1050px;
@@ -259,7 +263,7 @@ h6, .h6 {
   float: left;
 }
 
-@media all and (min-width: 550px) {
+@media all and (min-width: 480px) {
   .col-xs-1 {
     width: 8.33333%;
   }
@@ -985,17 +989,7 @@ h6, .h6 {
   margin: 0 auto;
 }
 
-@media (max-width: 550px) {
-  .container {
-    text-align: center;
-    padding: 5px;
-  }
-  .text-left, .contacts-list li, .text-right {
-    text-align: center;
-  }
-  .price, .price-item {
-    width: 100%;
-  }
+@media (max-width: 810px) {
   .header-nav {
     display: none;
     position: absolute;
@@ -1024,7 +1018,7 @@ h6, .h6 {
     background-color: black;
     position: absolute;
     cursor: pointer;
-    top: 15px;
+    top: 0px;
     left: -75px;
   }
   .button-close-adaptive span {
@@ -1044,6 +1038,19 @@ h6, .h6 {
   }
   .button-close-adaptive:hover {
     opacity: 0.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    text-align: center;
+    padding: 5px;
+  }
+  p, .text-left, .contacts-list li, .text-right {
+    text-align: center;
+  }
+  .price, .price-item {
+    width: 100%;
   }
   .width-half {
     width: 100%;

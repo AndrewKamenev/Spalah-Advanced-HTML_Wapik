@@ -169,17 +169,7 @@
 	margin: 0 auto;
 }
 
-@media (max-width: 550px) {
-	.container {
-		text-align: center;
-		padding: 5px;
-	}
-	.text-left, .text-right {
-		text-align: center;
-	}
-	.price, .price-item {
-		width: 100%;
-	}
+@media (max-width: 810px){
 	.header-nav {
 		display: none;
 		position: absolute;
@@ -208,7 +198,7 @@
 		background-color: black;
 		position: absolute;
 		cursor: pointer;
-		top: 15px;
+		top: 0px;
 		left: -75px;
 		span {
 			display: inline-block;
@@ -229,6 +219,19 @@
 			opacity: 0.7;
 		}
 	}
+}
+@media (max-width: 480px) {
+	.container {
+		text-align: center;
+		padding: 5px;
+	}
+	p, .text-left, .text-right {
+		text-align: center;
+	}
+	.price, .price-item {
+		width: 100%;
+	}
+	
 	.width-half {
 		width: 100%;
 	}
